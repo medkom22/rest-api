@@ -18,11 +18,17 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'nama' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'role' => "admin",
+            'uuid' => fake()->uuid(),
+            'username' => fake()->firstName(),
+            'avatar' => "1.jpg",
+            'alamat' => fake()->address(),
+            'password' => bcrypt("Medkom 12345"),
             'remember_token' => Str::random(10),
+            // 'deskripsi'=> fake()->paragraph(3)
         ];
     }
 
