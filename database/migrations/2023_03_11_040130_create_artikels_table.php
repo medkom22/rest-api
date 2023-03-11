@@ -20,8 +20,9 @@ return new class extends Migration
             $table->foreignIdFor(Artikel_kategori::class);
             $table->foreignIdFor(User::class);
             $table->string("title");
+            $table->string("sampul");
             $table->string("slug");
-            $table->text("konten");
+            $table->longText("konten");
             $table->timestamps();
         });
     }
