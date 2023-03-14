@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('ukms', function (Blueprint $table) {
             $table->id();
-            $table->string("nama");
+            $table->string("nama")->unique();
             $table->string("avatar");
             $table->longText("deskripsi");
-            $table->string("instagram");
-            $table->string("link_form");
+            $table->string("instagram")->nullable();
+            $table->string("link_form")->nullable();
             $table->timestamps();
         });
     }

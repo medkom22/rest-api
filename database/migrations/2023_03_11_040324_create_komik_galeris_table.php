@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('komik_galeris', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Komik::class);
-            $table->string("nama");
+            $table->string("nama")->unique();
             $table->timestamps();
         });
     }

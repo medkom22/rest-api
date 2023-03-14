@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('event_galeris', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Event::class);
-            $table->string("nama");
+            $table->string("nama")->unique();
             $table->timestamps();
         });
     }

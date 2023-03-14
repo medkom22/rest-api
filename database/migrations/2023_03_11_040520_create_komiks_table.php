@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->foreignIdFor(Komik_kategori::class);
-            $table->string("nama");
+            $table->string("nama")->unique();
             $table->string("sampul");
             $table->timestamps();
         });

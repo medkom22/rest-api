@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('fakultas', function (Blueprint $table) {
             $table->id();
-            $table->string("nama");
+            $table->string("nama")->unique();
             $table->string("avatar");
             $table->longText("deskripsi");
             $table->string("lokasi");
-            $table->string("instagram");
-            $table->string("website");
-            $table->string("youtube");
-            $table->string("tiktok");
+            $table->string("instagram")->nullable();
+            $table->string("website")->nullable();
+            $table->string("youtube")->nullable();
+            $table->string("tiktok")->nullable();
             $table->timestamps();
         });
     }

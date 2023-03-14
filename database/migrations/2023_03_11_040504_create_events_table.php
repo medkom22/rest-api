@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string("nama");
+            $table->string("nama")->unique();
             $table->string("sampul");
             $table->text("deskripsi");
-            $table->string("link_form");
-            $table->string("instagram");
+            $table->string("link_form")->nullable();
+            $table->string("instagram")->nullable();
             $table->timestamps();
         });
     }
