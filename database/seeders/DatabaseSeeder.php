@@ -20,6 +20,8 @@ use \App\Models\Fakultas_galeri;
 use \App\Models\Komik_kategori;
 use \App\Models\Komik;
 use \App\Models\Komik_galeri;
+use \App\Models\Produk;
+use \App\Models\Produk_kategori;
 
 class DatabaseSeeder extends Seeder
 {
@@ -39,6 +41,8 @@ class DatabaseSeeder extends Seeder
         Komik_kategori::factory(3)->create();
         Komik::factory(10)->create();
         Komik_galeri::factory(20)->create();
+        Produk::factory(6)->create();
+        Produk_kategori::factory(3)->create();
         
 
 

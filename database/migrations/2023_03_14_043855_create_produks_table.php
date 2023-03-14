@@ -5,8 +5,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 
-use \App\Models\Event;
 
+
+use \App\Models\Produk_kategori;
 return new class extends Migration
 {
     /**
@@ -14,10 +15,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('event_galeris', function (Blueprint $table) {
+        Schema::create('produks', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Event::class);
-            $table->string("nama");
+            $table->foreignIdFor(Produk_kategori::class);
+            $table->string("nama")->unique();
+            $table->integer("harga");
+            $table->string("foto_produk");
+            $table->longText("deskripsi");
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('event_galeris');
+        Schema::dropIfExists('produks');
     }
 };

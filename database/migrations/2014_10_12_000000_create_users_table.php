@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('alamat')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->text("deskripsi")->nullable();
+            $table->longText("deskripsi")->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

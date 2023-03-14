@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("nama")->unique();
             $table->string("sampul");
-            $table->text("deskripsi");
+            $table->longText("deskripsi");
             $table->string("link_form")->nullable();
             $table->string("instagram")->nullable();
             $table->timestamps();

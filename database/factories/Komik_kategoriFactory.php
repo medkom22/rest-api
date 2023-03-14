@@ -17,7 +17,7 @@ class Komik_kategoriFactory extends Factory
     public function definition(): array
     {
         return [
-            'nama'=> fake()->paragraph(rand(3, 5), false)
+            'nama'=> fake()->sentence(rand(3, 5), false)
         ];
     }
 }

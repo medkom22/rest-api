@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('ukm_galeris', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Ukm::class);
-            $table->string("nama")->unique();
+            $table->string("nama");
             $table->timestamps();
         });
     }

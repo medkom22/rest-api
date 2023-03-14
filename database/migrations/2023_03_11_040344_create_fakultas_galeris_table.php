@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('fakultas_galeris', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Fakultas::class);
-            $table->string("nama")->unique();
+            $table->string("nama");
             $table->timestamps();
         });
     }
